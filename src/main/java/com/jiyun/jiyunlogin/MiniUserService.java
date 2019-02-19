@@ -29,6 +29,7 @@ public class MiniUserService{
         }
         TokenJson objcect = weChatMethod.getResultByWxCode(code);
         String openid = objcect.getOpenid();
+        System.out.println(openid+"--->openid==");
         String sessionKey = objcect.getSessionKey();
         WechatUser weChatUser = WeChatMethod.getWeChatUserByData(openid, sessionKey, encryptedData, iv);
         System.out.println("weChatUser=="+weChatUser);

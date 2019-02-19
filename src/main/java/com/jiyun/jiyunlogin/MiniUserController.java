@@ -17,7 +17,7 @@ public class MiniUserController {
     private MiniUserService miniUserService;
 
     @RequestMapping(value = "/miniProgram/user/code", method = RequestMethod.POST)
-   public Result getByWxCode(@RequestBody TokenJson tokenJson) throws Exception {
+   public Result getByWxCode(TokenJson tokenJson) throws Exception {
         System.out.println(tokenJson);
         return miniUserService.getByWxCode(tokenJson);
    }

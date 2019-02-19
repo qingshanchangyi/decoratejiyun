@@ -38,7 +38,7 @@ public class WeChatMethod {
      */
     /*根据临时code获取openId和sessionId*/
     public TokenJson getResultByWxCode(String code) throws Exception {
-        //System.out.println(constant.getWECHAT_APPID()+constant.getWX_WEB_SECRET()+"appid和secret");
+        System.out.println(constant.getWECHAT_APPID()+constant.getWX_WEB_SECRET()+"appid和secret==");
         String getWeChatUserUrl = BASE_PATH + "/jscode2session?appid=" + constant.getWECHAT_APPID() + "&secret=" + constant.getWX_WEB_SECRET() + "&js_code=" + code + "&grant_type=authorization_code";
         JSONObject tokenJsonObject = HttpRequestService.get(getWeChatUserUrl);
         System.out.println(tokenJsonObject+"---->tokenJsonObject");
